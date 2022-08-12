@@ -8,7 +8,7 @@ import { mapActions } from 'vuex';
 
 export default {
   methods: {
-    ...mapActions(['addOne', 'increase']),
+    ...mapActions('counterModule', ['addOne', 'increase']),
   },
 };
 </script>

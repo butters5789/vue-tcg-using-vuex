@@ -27,7 +27,7 @@ export default {
     ...mapGetters(['userIsAuthenticated']),
   },
   methods: {
-    ...mapActions(['addOne']),
+    ...mapActions('counterModule', ['addOne']),
   },
   components: {
     BaseContainer,
