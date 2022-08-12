@@ -1,13 +1,14 @@
 <template>
-  <button @click="addOne">Add 10</button>
+  <button @click="increase({ value: 12 })">Add 12</button>
+  <button @click="addOne">Add 1</button>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   methods: {
-    addOne() {
-      this.$store.dispatch('increase', { value: 10 });
-    },
+    ...mapActions(['addOne', 'increase']),
   },
 };
 </script>

@@ -15,6 +15,7 @@ import BaseContainer from './components/BaseContainer.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
 import TheCounter from './components/TheCounter.vue';
 import FavoriteValue from './components/FavoriteValue.vue';
+import { mapActions } from 'vuex';
 
 export default {
   components: {
@@ -24,9 +25,7 @@ export default {
     FavoriteValue,
   },
   methods: {
-    addOne() {
-      this.$store.dispatch('addOne');
-    },
+    ...mapActions(['addOne']),
   },
 };
 </script>
