@@ -27,6 +27,16 @@ const store = createStore({
       return finalCounter;
     },
   },
+  actions: {
+    addOne(context) {
+      setTimeout(() => {
+        context.commit('addOne');
+      }, 2000);
+    },
+    increase(context, payload) {
+      context.commit('increase', payload);
+    },
+  },
   mutations: {
     addOne(state) {
       state.counter = state.counter + 1;
